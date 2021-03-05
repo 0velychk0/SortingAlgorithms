@@ -1,10 +1,8 @@
 
-class BubbleSorter {
+class BubbleSorter extends Sorter {
  
     private BubbleSorter(){}
 
-    private static final String name = "BubbleSorter";
-    
     public static void sort(int[] array) {  
         boolean sorted = false;
         int temp;

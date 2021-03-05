@@ -26,7 +26,7 @@ class SortTest {
         long before = System.currentTimeMillis();
 
         BubbleSorter.sort(array);
-        
+
         long after = System.currentTimeMillis();
         
         if (sortChecker(array) < 0)

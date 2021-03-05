@@ -1,10 +1,8 @@
 
-class SelectionSorter {
+class SelectionSorter extends Sorter {
  
     private SelectionSorter(){}
 
-    private static final String name = "SelectionSorter";
-    
     public static void sort(int[] array) {  
         for (int i = 0; i < array.length; i++) {
             int min = array[i];

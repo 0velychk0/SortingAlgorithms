@@ -1,10 +1,8 @@
 
-class InsertionSorter {
+class InsertionSorter extends Sorter {
  
     private InsertionSorter(){}
 
-    private static final String name = "InsertionSorter";
-    
     public static void sort(int[] array) {  
         for (int i = 1; i < array.length; i++) {
             int current = array[i];

@@ -1,9 +1,7 @@
-  // df
-class QuickSorter {
+
+class QuickSorter extends Sorter {
  
     private QuickSorter(){}
-
-    private static final String name = "QuickSorter";
 
     public static void sort(int[] array) {  
         quickSort(array, 0, array.length-1);

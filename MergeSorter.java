@@ -1,9 +1,7 @@
 
-class MergeSorter {
+class MergeSorter extends Sorter {
 
     private MergeSorter(){}
-
-    private static final String name = "MergeSorter";
 
     private static void merge(int[] array, int left, int mid, int right) {
         // вычисляем длину
