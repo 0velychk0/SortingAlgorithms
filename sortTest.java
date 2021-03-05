@@ -25,7 +25,7 @@ class SortTest {
 
         long before = System.currentTimeMillis();
 
-        BubbleSorter.sort(array);
+        SorterFabric.getSortByType(SorterTypeEnum.BUBBLE, array);
 
         long after = System.currentTimeMillis();
         
@@ -41,8 +41,8 @@ class SortTest {
 
         before = System.currentTimeMillis();
 
-        InsertionSorter.sort(array);
-        
+        SorterFabric.getSortByType(SorterTypeEnum.INSERTION, array);
+
         after = System.currentTimeMillis();
 
         if (sortChecker(array) < 0)
@@ -56,7 +56,7 @@ class SortTest {
 
         before = System.currentTimeMillis();
 
-        SelectionSorter.sort(array);
+        SorterFabric.getSortByType(SorterTypeEnum.SELECTION, array);
 
         after = System.currentTimeMillis();
 
@@ -71,7 +71,7 @@ class SortTest {
 
         before = System.currentTimeMillis();
 
-        MergeSorter.sort(array);
+        SorterFabric.getSortByType(SorterTypeEnum.MERGE, array);
 
         after = System.currentTimeMillis();
 
@@ -86,7 +86,7 @@ class SortTest {
 
         before = System.currentTimeMillis();
 
-        QuickSorter.sort(array);
+        SorterFabric.getSortByType(SorterTypeEnum.QUICK, array);
 
         after = System.currentTimeMillis();
 
