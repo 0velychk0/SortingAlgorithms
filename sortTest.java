@@ -24,7 +24,7 @@ class SortTest {
             count++;
         }
     }
-// ewddwde
+
     // 2. Insertion Sort
     public static void insertionSort(int[] array) {  
         for (int i = 1; i < array.length; i++) {
@@ -111,7 +111,6 @@ class SortTest {
     }
 
     // 5. Fast Sort
-
     public static int partition(int[] array, int begin, int end) {  
         int pivot = end;
     
@@ -139,7 +138,7 @@ class SortTest {
     }
 
 
-    // Array checker that is is sorted
+    // Array checker that it is sorted
     public static int sortChecker(int[] array) {  
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] > array[i+1])
@@ -152,8 +151,9 @@ class SortTest {
 
     public static void main(String[] args) {
         Random random = new Random();
-// ****************        
-        int[] array = random.ints(100000, 10,100000).toArray();
+        int[] arrayToSort = random.ints(100000, 10,100000).toArray();
+// ****************
+        int[]  array = arrayToSort.clone();
 
         long before = System.currentTimeMillis();
 
@@ -169,7 +169,7 @@ class SortTest {
         logger.log(Level.INFO, "Bubble Sort Time: {0}", (after - before));
 
 // ****************
-        array = random.ints(100000, 10,100000).toArray();
+        array = arrayToSort.clone();
 
         before = System.currentTimeMillis();
 
@@ -184,7 +184,7 @@ class SortTest {
 
         logger.log(Level.INFO, "Insertion Sort Time: {0}", (after - before));
 // ****************
-        array = random.ints(100000, 10,100000).toArray();
+        array = arrayToSort.clone();
 
         before = System.currentTimeMillis();
 
@@ -199,7 +199,7 @@ class SortTest {
 
         logger.log(Level.INFO, "Selection Sort Time: {0}", (after - before));
 // **************** mergeSort
-        array = random.ints(100000, 10,100000).toArray();
+        array = arrayToSort.clone();
 
         before = System.currentTimeMillis();
 
@@ -214,7 +214,7 @@ class SortTest {
 
         logger.log(Level.INFO, "Merge Sort Time: {0}", (after - before));
 // **************** quickSort
-        array = random.ints(100000, 10,100000).toArray();
+        array = arrayToSort.clone();
 
         before = System.currentTimeMillis();
 
@@ -231,6 +231,3 @@ class SortTest {
 // ****************
     }
 }
-// First Version
-
-
