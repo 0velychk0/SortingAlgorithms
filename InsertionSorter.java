@@ -1,7 +1,7 @@
 
 class InsertionSorter {
  
-    private BubbleSorter(){}
+    private InsertionSorter(){}
 
     private static final String name = "InsertionSorter";
     

@@ -2,29 +2,12 @@
 import java.util.Random;
 import BubbleSorter;
 import InsertionSorter;
+import SelectionSorter;
 import java.util.logging.*;
  
 class SortTest {
 
     private static Logger logger = Logger.getLogger(SortTest.class.getName());
-
-    // 3. Selection Sort
-    public static void selectionSort(int[] array) {  
-        for (int i = 0; i < array.length; i++) {
-            int min = array[i];
-            int minId = i;
-            for (int j = i+1; j < array.length; j++) {
-                if (array[j] < min) {
-                    min = array[j];
-                    minId = j;
-                }
-            }
-            // замена
-            int temp = array[i];
-            array[i] = min;
-            array[minId] = temp;
-        }
-    }
 
     // 4. Merge Sort
     public static void merge(int[] array, int left, int mid, int right) {
@@ -158,7 +141,7 @@ class SortTest {
 
         before = System.currentTimeMillis();
 
-        selectionSort(array);
+        SelectionSorter.sort(array);
 
         after = System.currentTimeMillis();
 
