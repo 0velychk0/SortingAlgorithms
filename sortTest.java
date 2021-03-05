@@ -1,25 +1,13 @@
 
 import java.util.Random;
 import BubbleSorter;
+import InsertionSorter;
 import java.util.logging.*;
  
 class SortTest {
 
     private static Logger logger = Logger.getLogger(SortTest.class.getName());
 
-    // 2. Insertion Sort
-    public static void insertionSort(int[] array) {  
-        for (int i = 1; i < array.length; i++) {
-            int current = array[i];
-            int j = i - 1;
-            while(j >= 0 && current < array[j]) {
-                array[j+1] = array[j];
-                j--;
-            }
-            array[j+1] = current;
-        }
-    }
-     
     // 3. Selection Sort
     public static void selectionSort(int[] array) {  
         for (int i = 0; i < array.length; i++) {
@@ -134,7 +122,7 @@ class SortTest {
     public static void main(String[] args) {
         Random random = new Random();
         int[] arrayToSort = random.ints(100000, 10,100000).toArray();
-// **************** 
+// ****************
         int[]  array = arrayToSort.clone();
 
         long before = System.currentTimeMillis();
@@ -155,7 +143,7 @@ class SortTest {
 
         before = System.currentTimeMillis();
 
-        insertionSort(array);
+        InsertionSorter.sort(array);
         
         after = System.currentTimeMillis();
 
