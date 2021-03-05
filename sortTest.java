@@ -134,7 +134,7 @@ class SortTest {
     public static void main(String[] args) {
         Random random = new Random();
         int[] arrayToSort = random.ints(100000, 10,100000).toArray();
-// ****************
+// **************** 
         int[]  array = arrayToSort.clone();
 
         long before = System.currentTimeMillis();
